@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tags HTML</title>
     <meta charset="utf-8">
+
+    <title>Tags HTML</title>
   </head>
 
   <body>
     <div>
+      <div class="main" id="section1">
+        <h2>Section 1</h2>
+
+        <a href="#section2">Go to Section 2</a>
+      </div>
+
+      <br>
+
       O conteúdo fica aqui!
 
       <br>
@@ -107,7 +116,7 @@
       width="358"
       height="358">
     </div>
-    
+
     <hr>
 
     <!-- Forms -->
@@ -293,6 +302,8 @@
       Review of W3Schools:
     </label>
 
+    <br>
+
     <textarea
       id="w3review"
       name="w3review"
@@ -300,8 +311,132 @@
       cols="200">
       At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
     </textarea>
+
+    <hr>
+
+    <h1>Formandos</h1>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>País</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Cris</td>
+        <td rowspan="2">Portugal</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Filipe</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Alicia</td>
+        <td>Angola</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>Eutico</td>
+        <td>Israel</td>
+      </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th colspan="3">Phone</th>
+      </tr>
+
+      <tr>
+        <td>John Doe</td>
+        <td>John.doe@example.com</td>
+        <td>917542543</td>
+        <td>917545895</td>
+        <td>917545819</td>
+      </tr>
+    </table>
+
+    <br>
+
+    <button
+      onclick="window.print()">
+      Print this page
+    </button>
+
+    <br>
+    <br>
+
+    <div class="mapouter">
+      <div
+        class="gmap_canvas">
+
+        <iframe
+          width="600"
+          height="500"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=rua%20de%20marte&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0">
+        </iframe>
+
+        <a href="https://fmovies-online.net"></a>
+
+        <br>
+
+        <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
+
+        <a href="https://www.embedgooglemap.net">embed google maps api</a>
+
+        <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+      </div>
+    </div>
+
+    <br>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/KPqtlI3aJIE"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="main" id="section2">
+      <h2>Section 2</h2>
+
+      <a href="#section1">Go to Section 1</a>
+    </div>
   </body>
 
   <footer>
   </footer>
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </html>
