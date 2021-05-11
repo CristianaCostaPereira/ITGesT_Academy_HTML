@@ -56,6 +56,43 @@
         overflow: hidden; /* Hides the content when it is higher then my width */
         text-overflow: ellipsis; /* Apply the 3 dots when the text is longer than my width */
       }
+
+      table, td, th {
+        border: 1px solid #130d0d;
+        margin-top: 10px;
+      }
+
+      table {
+        border-collapse: collapse; /* Delete the two borders looks */
+        width: 100%;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+
+      .striped-table th, td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      /* Aplies, in all the even lines, the color that we stablished */
+      .striped-table tr:nth-child(even) {
+        background-color: #bbb3b3a4;
+      }
+      
+      .striped-table th {
+        background-color: green;
+        color: white;
+      }
+
+      .striped-table td:last-child {
+        text-align: right;
+      }
+
+      .striped-table th{
+        text-align: center;
+      }
     </style>
   </head>
 
@@ -119,5 +156,39 @@
 
     <i class="material-icons">person</i>
     <label for="address">Utilizador</label>
+
+    <hr>
+
+    <table class="striped-table">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Savings</th>
+      </tr>
+
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+      </tr>
+
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+      </tr>
+
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+      </tr>
+
+      <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+      </tr>
+    </table>
   </body>
 </html>
