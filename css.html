@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Título da página</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+      h1 {
+        color: #90c419;
+        text-align: center; /* Place the text in the center */
+        font-size: 80px;
+        background-color: #21769256;
+        font-family: cursive;
+      }
+
+      h2 {
+        border: 2px solid tomato;
+        text-align: center;
+        border-radius: 12px;
+      }
+
+      .side-by-side {
+        display: flex; /* Elements stay side-by-side in the same line */
+      }
+
+      /* All h2 elements that are child of the side-by-side class */
+      .side-by-side h2 {
+        color: green;
+        width: -webkit-fill-available;
+        margin: 5px;
+        padding: 10px;
+      }
+
+      .width-and-height {
+        height: 200px;
+        background-color: red;
+        margin: 20px 0px 20px 0px; /* margin: auto -> Places the items items in the center */
+        padding: 50px 0px 0px 40px;
+      }
+
+      p {
+        text-indent: 50px;
+        letter-spacing: 3px;
+        line-height: 1.8;
+        height: 77px;
+        overflow-y: scroll;
+      }
+
+      .text-limit {
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden; /* Hides the content when it is higher then my width */
+        text-overflow: ellipsis; /* Apply the 3 dots when the text is longer than my width */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      Ailton Allen
+    </h1>
+
+    <h1>
+      Filipe Carolino
+    </h1>
+
+    <div
+      class="side-by-side">
+      <h2>
+        Hello World 1
+      </h2>
+
+      <h2>
+        Hello World 2
+      </h2>
+    </div>
+
+    <div
+      style="display: flex;
+      justify-content: center;">
+
+      <img
+        style="opacity: 0.5;"
+        src="https://www.w3schools.com/css/img_5terre.jpg">
+    </div>
+
+    <div
+      class="width-and-height">
+      This div element has a height of 200px and a width of 50%.
+    </div>
+
+    <p>
+      In my younger and more vulnerable years my father gave me some advice that I have been turnning over in my mind ever since.
+      'Whenever you feel like criticizing anyone', he told me, 'just remember that all the people in this World havent't had the advantages that you've had'.
+
+      Donut cupcake gummi bears cheesecake apple pie powder marzipan pudding donut. Marzipan oat cake chocolate bar toffee. Powder pudding croissant brownie donut.
+      Tart gummi bears icing candy canes. Tiramisu icing pie sweet cupcake powder cookie wafer. Tiramisu jelly-o jujubes. Halvah donut tiramisu.
+      Cotton candy cheesecake carrot cake muffin macaroon chocolate chocolate candy canes. Cookie dessert carrot cake biscuit pastry powder. Caramels sesame snaps tiramisu cupcake. Apple pie candy canes toffee bonbon marzipan jujubes dragée lollipop halvah.
+      Cookie fruitcake jujubes pudding topping chupa chups muffin macaroon. Cotton candy oat cake caramels lollipop. Jelly icing cheesecake soufflé. Cookie liquorice danish biscuit.
+      Bear claw cake dragée liquorice oat cake chocolate cake. Cookie candy lollipop oat cake icing bonbon cake caramels. Soufflé bonbon bonbon tiramisu dragée pudding tart pudding. Candy canes marzipan cookie.
+    </p>
+
+    <div class="text-limit">
+      Academia ITGest - Rua Dr. Álvaro Castelões
+    </div>
+
+    <i class="fas fa-map-marker-alt"></i>
+    <label for="address">Morada</label>
+
+    <i class="material-icons">location_on</i>
+    <label for="address">Morada</label>
+
+    <i class="fas fa-user"></i>
+    <label for="address">Utilizador</label>
+
+    <i class="material-icons">person</i>
+    <label for="address">Utilizador</label>
+  </body>
+</html>
