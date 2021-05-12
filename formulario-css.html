@@ -34,21 +34,25 @@
         align-items: center;
       }
 
+      #icon {
+        display: flex;
+        position: relative;
+        top: 10px;;
+        right: -863px;
+      }
+
       .material-icons {
-        color: #1d7008;
         font-size: 45px;
-        /* display: flex;
-        flex-direction: row;
-        justify-content: flex-end; */
+        color: #274e3e;
         margin-bottom: 20px;
         cursor: pointer;
       }
 
       h1 {
         font-family: 'Roboto', sans-serif;
-        color: #227d58;
+        color: #274e3e;
         font-size:70px;
-        -webkit-text-stroke: 1px #d6b45b9c; /* Specifies the width and color of strokes for text characters */
+        -webkit-text-stroke: 1px #d3b25178; /* Specifies the width and color of strokes for text characters */
         line-height: 1.2;
       }
 
@@ -106,14 +110,20 @@
           color: #274e3e;
         }
 
+        #icon {
+          display: flex;
+          position: relative;
+          right: -3276px;
+        }
+
         .form-label {
-          background: #ffffffa3;
+          background: #ffffff8a;
         }
       }
 
       @media screen and (max-width: 600px) {
         body {
-          background: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_960_720.png");
+          background: black;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -121,15 +131,25 @@
           color: black;
         }
 
+        #icon {
+          display: flex;
+          position: relative;
+          right: -222px;
+        }
+
         .form-label .input-label, #courses {
           background: white;
         }
+
+        span {
+          color: white;
+        };
       }
     </style>
   </head>
 
   <body>
-    <div>
+    <div id="icon">
       <i class="material-icons">close</i>
     </div>
 
