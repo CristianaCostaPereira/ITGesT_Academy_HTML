@@ -4,14 +4,108 @@
     <meta charset="UTF-8">
 
     <title>ITGest Academy – Academias de Formação</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <style>
+
+      /* Aplly the properties in all of the DOM */
+      * {
+        background-color: black;
+        color: #ffffff;
+      }
+
+      body {
+        padding: 80px;
+        margin: 8px;
+      }
+
+      .material-icons {
+        color: #ffec01;
+        font-size: 45px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 35px;
+        margin-bottom: 65px;
+        cursor: pointer;
+      }
+
+      h1 {
+        font-family: 'Roboto', sans-serif;
+        color: #000000;
+        font-size:70px;
+        -webkit-text-stroke: 1px #faeb14; /* Specifies the width and color of strokes for text characters */
+        line-height: 1.2;
+      }
+
+      span, .form-label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        margin: 10px 5px;
+      }
+
+      #courses, .input-label {
+        color: #fff;
+        padding: 12px;
+        margin-top: 5px;
+        width: 100%;
+        border: 4px solid #f8e910;
+        background: #000000;
+        box-sizing: border-box;
+      }
+
+
+      .check-options {
+        padding: 8px 10px;
+        line-height: 26px;
+      }
+
+      .policy {
+        color:#ffe600;
+        text-decoration:underline;
+      }
+
+      .policy-checkbox {
+        margin-left: 25px;
+      }
+
+      .submit-form {
+        font-family: 'Roboto', sans-serif;
+        color: #000000;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 23px;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: #ffe600;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>Inscreve-te</h1>
-
     <div>
+      <i class="material-icons">close</i>
+    </div>
+
+    <img
+      width="68"
+      height="53"
+      src="https://academy.itgest.pt/wp-content/uploads/2021/03/trianglo-amarelo-8.png">
+
+    <h1>
+      Inscreve-te
+    </h1>
+
+    <div class="form-label">
       <label for="academy">
-        <b>Academia a que se está a candidatar*</b>
+        Academia a que se está a candidatar*
       </label>
 
       <br>
@@ -26,31 +120,35 @@
 
     <br>
 
-    <div>
-      <label for="name">
-        <b>Nome e Apelido*</b>
+    <!-- Name and Last Name -->
+    <div class="form-label">
+      <label for="name-lastname">
+        Nome e Apelido*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="text"
-        id="name"
-        name="name"
+        id="name-lastname"
+        name="name-lastname"
         size="40"
         placeholder="Nome e Apelido">
     </div>
 
     <br>
 
-    <div>
+    <!-- Email -->
+    <div class="form-label">
       <label for="email">
-        <b>Endereço de e-mail*</b>
+        Endereço de e-mail*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="email"
         name="email"
         size="40"
@@ -59,214 +157,223 @@
 
     <br>
 
-    <div>
+    <!-- Date of Birth -->
+    <div class="form-label">
       <label for="dob">
-        <b>Data de Nascimento*</b>
+        Data de Nascimento*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="date"
         id="dob"
         name="dob">
     </div>
 
     <br>
-    <br>
 
-    <div>
+    <!-- Qualifications -->
+    <div class="form-label">
       <label for="qualifications">
-        <b>Habilitações Literárias*</b>
+        Habilitações Literárias*
       </label>
 
       <br>
 
-      <input
-        type="checkbox"
-        id="qualifications1"
-        name="qualifications1">
+      <div class="check-options">
+        <input
+          type="checkbox"
+          id="high-school"
+          name="high-school">
 
-      <label
-        for="qualifications1">
-        Ensino Secundário
-      </label>
+        <label
+          for="high-school">
+          Ensino Secundário
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="qualifications2"
-        name="qualifications2">
+        <input
+          type="checkbox"
+          id="graduation"
+          name="graduation">
 
-      <label
-        for="qualifications2">
-        Licenciatura
-      </label>
+        <label
+          for="graduation">
+          Licenciatura
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="qualifications3"
-        name="qualifications3">
+        <input
+          type="checkbox"
+          id="masters-degree"
+          name="masters-degree">
 
-      <label
-        for="qualifications3">
-        Mestrado
-      </label>
+        <label
+          for="masters-degree">
+          Mestrado
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="qualifications4"
-        name="qualifications4">
+        <input
+          type="checkbox"
+          id="doctorate"
+          name="doctorate">
 
-      <label
-        for="qualifications4">
-        Doutoramento
-      </label>
+        <label
+          for="doctorate">
+          Doutoramento
+        </label>
+      </div>
     </div>
 
     <br>
 
-    <div>
+    <!-- School Area -->
+    <div class="form-label">
       <label for="school-area">
-        <b>Área de Formação*</b>
+        Área de Formação*
       </label>
 
       <br>
 
-      <input
-        type="checkbox"
-        id="school-area1"
-        name="school-area1">
+      <div class="check-options">
+        <input
+          type="checkbox"
+          id="social-sciences"
+          name="social-sciences">
 
-      <label
-        for="school-area1">
-        Ciências Sociais e Humanos
-      </label>
+        <label
+          for="social-sciences">
+          Ciências Sociais e Humanos
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area2"
-        name="school-area2">
+        <input
+          type="checkbox"
+          id="business-sciences"
+          name="business Sciences">
 
-      <label
-        for="school-area2">
-        Ciências Empresariais
-      </label>
+        <label
+          for="business Sciences">
+          Ciências Empresariais
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area3"
-        name="school-area3">
+        <input
+          type="checkbox"
+          id="economics"
+          name="economics">
 
-      <label
-        for="school-area3">
-        Gestão/ Economia
-      </label>
+        <label
+          for="economics">
+          Gestão / Economia
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area4"
-        name="school-area4">
+        <input
+          type="checkbox"
+          id="computer-it"
+          name="computer-it">
 
-      <label
-        for="school-area4">
-        Informática
-      </label>
+        <label
+          for="computer-it">
+          Informática
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area5"
-        name="school-area5">
+        <input
+          type="checkbox"
+          id="management-it"
+          name="management-it">
 
-      <label
-        for="school-area5">
-        Informática de Gestão
-      </label>
+        <label
+          for="management-it">
+          Informática de Gestão
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area6"
-        name="school-area6">
+        <input
+          type="checkbox"
+          id="engineering"
+          name="engineering">
 
-      <label
-        for="school-area6">
-        Engenharia e técnicas afins
-      </label>
+        <label
+          for="engineering">
+          Engenharia e técnicas afins
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area7"
-        name="school-area7">
+        <input
+          type="checkbox"
+          id="accounting"
+          name="accounting">
 
-      <label
-        for="school-area7">
-        Contabilidade/ Finanças
-      </label>
+        <label
+          for="accounting">
+          Contabilidade / Finanças
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area8"
-        name="school-area8">
+        <input
+          type="checkbox"
+          id="health"
+          name="health">
 
-      <label
-        for="school-area8">
-        Saúde
-      </label>
+        <label
+          for="health">
+          Saúde
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area9"
-        name="school-area9">
+        <input
+          type="checkbox"
+          id="social-services"
+          name="social-services">
 
-      <label
-        for="school-area9">
-        Serviços Sociais
-      </label>
+        <label
+          for="social-services">
+          Serviços Sociais
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="school-area10"
-        name="school-area10">
+        <input
+          type="checkbox"
+          id="others"
+          name="others">
 
-      <label
-        for="school-area10">
-        Outros
-      </label>
+        <label
+          for="others">
+          Outros
+        </label>
+      </div>
     </div>
 
     <br>
 
-    <div>
+    <!-- Year of Conclusion -->
+    <div class="form-label">
       <label for="year">
-        <b>Ano de Conclusão*</b>
+        Ano de Conclusão*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="number"
         id="year"
         name="year"
@@ -275,14 +382,16 @@
 
     <br>
 
-    <div>
+    <!-- Motive for Application -->
+    <div class="form-label">
       <label for="motive">
-        <b>Motivo da Candidatura*</b>
+        Motivo da Candidatura*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="text"
         id="motive"
         name="motive"
@@ -291,83 +400,88 @@
 
     <br>
 
-    <div>
+    <!-- Kowledge about the Academy -->
+    <div class="form-label">
       <label
         for="knowledge">
-        <b>Como obteve conhecimento da nossa Academia?*</b>
+        Como obteve conhecimento da nossa Academia?*
       </label>
 
       <br>
 
-      <input
-        type="checkbox"
-        id="knowledge1"
-        name="knowledge1">
+      <div class="check-options">
+        <input
+          type="checkbox"
+          id="know-someone-in-the-company"
+          name="know-someone-in-the-company">
 
-        <label
-          for="knowledge1">
-          Conheço alguém que faz parte do Grupo ID / ITGEST
-      </label>
+          <label
+            for="know-someone-in-the-company">
+            Conheço alguém que faz parte do Grupo ID / ITGEST
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="knowledge2"
-        name="knowledge2">
+        <input
+          type="checkbox"
+          id="social-network"
+          name="social-network">
 
-        <label
-          for="knowledge2">
-          Redes Sociais (Facebook, instagram ou outro)
-      </label>
+          <label
+            for="social-network">
+            Redes Sociais (Facebook, instagram ou outro)
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="knowledge3"
-        name="knowledge3">
+        <input
+          type="checkbox"
+          id="linkedin"
+          name="linkedin">
 
-        <label
-          for="knowledge3">
-          Linkedin
-      </label>
+          <label
+            for="linkedin">
+            Linkedin
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="knowledge4"
-        name="knowledge4">
+        <input
+          type="checkbox"
+          id="through-college"
+          name="through-college">
 
-        <label
-          for="knowledge4">
-          Através da faculdade/universidade
-      </label>
+          <label
+            for="through-college">
+            Através da faculdade / universidade
+        </label>
 
-      <br>
+        <br>
 
-      <input
-        type="checkbox"
-        id="knowledge5"
-        name="knowledge5">
+        <input
+          type="checkbox"
+          id="knowledge-others"
+          name="knowledge-others">
 
-        <label
-          for="knowledge5">
-          Outro
-      </label>
+          <label
+            for="knowledge-others">
+            Outro
+        </label>
+      </div>
     </div>
 
     <br>
 
-    <div>
+    <!-- Upload CV -->
+    <div class="form-label">
       <label for="myfile">
-        <b>Upload de <i>CV</i>*</b>
+        Upload de <i>CV</i>*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="file"
         id="myfile"
         name="myfile"
@@ -376,47 +490,52 @@
 
     <br>
 
-    <div>
-      <label for="mycv">
-        <b>Upload de Certificado de Habilitações*</b>
+    <!-- Upload Certificate -->
+    <div class="form-label">
+      <label for="diploma">
+        Upload de Certificado de Habilitações*
       </label>
 
       <br>
 
       <input
+        class="input-label"
         type="file"
-        id="mycv"
-        name="mycv"
+        id="diploma"
+        name="diploma"
         placeholder="Motivo da Candidatura">
     </div>
 
     <br>
 
-    <div>
+    <!-- Doubts and clarifications -->
+    <div class="form-label">
       <label for="doubts">
-        <b>Deixa aqui as tuas dúvidas e esclarecimentos</b>
+        Deixa aqui as tuas dúvidas e esclarecimentos
       </label>
 
       <br>
 
       <textarea
+        class="input-label"
         name="doubts"
         cols="40"
-        rows="10"
-        placeholder="Deixa-nos aqui as tuas dúvidas / pedidos de esclarecimento">
-      </textarea>
+        rows="15"
+        placeholder="Deixa-nos aqui as tuas dúvidas / pedidos de esclarecimento"></textarea>
     </div>
 
     <br>
 
     <div>
       <input
+        class="policy-checkbox"
         type="checkbox"
         name="policy"
         value="1">
 
       <span>Dou o meu consentimento à ITGest para tratar dos meus dados pessoais tal como descrito na
         <a
+          class="policy"
           href="https://academy.itgest.pt/politica-de-privacidade"
           target="_blank">
           Política de Privacidade
@@ -426,6 +545,7 @@
       <br>
 
       <button
+        class="submit-form"
         type="button">
         Enviar Inscrição
       </button>
