@@ -12,7 +12,7 @@
         background-color: red;
         font-weight: 700;
         position: relative;
-        animation: mymove 2s infinite;
+        animation: mymove 5s infinite;
       }
 
       #div1 {animation-timing-function: linear;}
@@ -21,7 +21,7 @@
       #div4 {animation-timing-function: ease-out;}
       #div5 {animation-timing-function: ease-in-out;}
 
-      @keyframes example {
+      @keyframes mymove {
         from {left: 0;}
         to {left: 300px;}
       }
@@ -29,12 +29,12 @@
   </head>
 
   <body>
-    <div>
-      <div id="div1">linear</div>
-      <div id="div2">ease</div>
-      <div id="div3">ease-in</div>
-      <div id="div4">ease-out</div>
-      <div id="div5">ease-in-out</div>
-    </div>
+    <p><strong>Note:</strong> The animation-timing-funtion property is not supported in Internet Explorer 9 and earlier versions.</p>
+
+    <div id="div1">linear</div>
+    <div id="div2">ease</div>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-out</div>
+    <div id="div5">ease-in-out</div>
   </body>
 </html>
