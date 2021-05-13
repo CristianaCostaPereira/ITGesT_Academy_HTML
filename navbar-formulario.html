@@ -14,13 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <style>
-      /* Aplly the properties in all of the DOM */
-      /* * {
-        background-color: black;
-        color: #ffffff;
-      } */
-
       body {
+        color: #ffffff;
         padding: 80px;
         margin: 8px;
       }
@@ -42,7 +37,7 @@
 
       /* Add line to the navbar */
       .navbar-border {
-        border: 2px solid blue;
+        border: 2px solid #0f0f0f;
       }
 
       .itgest-academy-logo {
@@ -85,6 +80,10 @@
         margin-bottom: 65px;
         cursor: pointer;
       } */
+
+      #hiden-form {
+        display: none;
+      }
 
       h1 {
         font-family: 'Roboto', sans-serif;
@@ -133,21 +132,37 @@
         text-transform: uppercase;
         background-color: #ffe600;
       }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        position: fixed;
+        left: 0;
+        bottom: 0px;
+        padding: 25px;
+        width: 100%;
+        line-height: 10px;
+        text-transform: uppercase;
+        background-color: #070706;
+      }
     </style>
 
-<script>
-  goToSignInForm = () => {
-    let form = document.getElementsByClassName('sign-in-button');
+    <script>
+      toggleSignInForm = () => {
+        let form = document.getElementById('hiden-form')
 
-    let show = element.style.display;
+        let displayProperty = form.style.display;
 
-    if (display == 'none') {
-      show = 'block'
-    } else {
-      show = 'none'
-    }
-  }
-</script>
+        if (displayProperty == 'block') {
+          form.style.display = 'none'
+        } else {
+          form.style.display = 'block'
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -166,7 +181,7 @@
           <a href="#about">
             Sobre a ITGest Academy
 
-           
+
             <i class="material-icons">
               arrow_drop_down
             </i>
@@ -176,471 +191,475 @@
 
       <button
         class="sign-in-button"
-        onClick="goToSignInForm()">
-        
+        onclick="toggleSignInForm()">
+
         <a href="#sign-in">Inscreve-te</a>
       </button>
     </nav>
 
-    <div>
-      <i class="material-icons">close</i>
-    </div>
+    <div
+      id="hiden-form">
 
-    <img
-      width="68"
-      height="53"
-      src="https://academy.itgest.pt/wp-content/uploads/2021/03/trianglo-amarelo-8.png">
-
-    <h1>
-      Inscreve-te
-    </h1>
-
-    <div class="form-label">
-      <label for="academy">
-        Academia a que se está a candidatar*
-      </label>
-
-      <br>
-
-      <select id="courses">
-        <option value="slash">---</option>
-        <option value="SAP HCM Success Factors (17 de Maio 2021)">SAP HCM Success Factors (17 de Maio 2021)</option>
-        <option value="Software Development">Software Development</option>
-        <option value="Business Intelligence Analytics (31 de Maio de 2021)">Business Intelligence & Analytics (31 de Maio de 2021)</option>
-      </select>
-    </div>
-
-    <br>
-
-    <!-- Name and Last Name -->
-    <div class="form-label">
-      <label for="name-lastname">
-        Nome e Apelido*
-      </label>
-
-      <br>
-
-      <input
-        class="input-label"
-        type="text"
-        id="name-lastname"
-        name="name-lastname"
-        size="40"
-        placeholder="Nome e Apelido">
-    </div>
-
-    <br>
-
-    <!-- Email -->
-    <div class="form-label">
-      <label for="email">
-        Endereço de e-mail*
-      </label>
-
-      <br>
-
-      <input
-        class="input-label"
-        type="email"
-        name="email"
-        size="40"
-        placeholder="Endereço de Email">
-    </div>
-
-    <br>
-
-    <!-- Date of Birth -->
-    <div class="form-label">
-      <label for="dob">
-        Data de Nascimento*
-      </label>
-
-      <br>
-
-      <input
-        class="input-label"
-        type="date"
-        id="dob"
-        name="dob">
-    </div>
-
-    <br>
-
-    <!-- Qualifications -->
-    <div class="form-label">
-      <label for="qualifications">
-        Habilitações Literárias*
-      </label>
-
-      <br>
-
-      <div class="check-options">
-        <input
-          type="checkbox"
-          id="high-school"
-          name="high-school">
-
-        <label
-          for="high-school">
-          Ensino Secundário
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="graduation"
-          name="graduation">
-
-        <label
-          for="graduation">
-          Licenciatura
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="masters-degree"
-          name="masters-degree">
-
-        <label
-          for="masters-degree">
-          Mestrado
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="doctorate"
-          name="doctorate">
-
-        <label
-          for="doctorate">
-          Doutoramento
-        </label>
+      <div>
+        <i class="material-icons">close</i>
       </div>
-    </div>
 
-    <br>
+      <img
+        width="68"
+        height="53"
+        src="https://academy.itgest.pt/wp-content/uploads/2021/03/trianglo-amarelo-8.png">
 
-    <!-- School Area -->
-    <div class="form-label">
-      <label for="school-area">
-        Área de Formação*
-      </label>
+      <h1>
+        Inscreve-te
+      </h1>
 
-      <br>
-
-      <div class="check-options">
-        <input
-          type="checkbox"
-          id="social-sciences"
-          name="social-sciences">
-
-        <label
-          for="social-sciences">
-          Ciências Sociais e Humanos
+      <div class="form-label">
+        <label for="academy">
+          Academia a que se está a candidatar*
         </label>
 
         <br>
 
-        <input
-          type="checkbox"
-          id="business-sciences"
-          name="business Sciences">
-
-        <label
-          for="business Sciences">
-          Ciências Empresariais
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="economics"
-          name="economics">
-
-        <label
-          for="economics">
-          Gestão / Economia
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="computer-it"
-          name="computer-it">
-
-        <label
-          for="computer-it">
-          Informática
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="management-it"
-          name="management-it">
-
-        <label
-          for="management-it">
-          Informática de Gestão
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="engineering"
-          name="engineering">
-
-        <label
-          for="engineering">
-          Engenharia e técnicas afins
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="accounting"
-          name="accounting">
-
-        <label
-          for="accounting">
-          Contabilidade / Finanças
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="health"
-          name="health">
-
-        <label
-          for="health">
-          Saúde
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="social-services"
-          name="social-services">
-
-        <label
-          for="social-services">
-          Serviços Sociais
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="others"
-          name="others">
-
-        <label
-          for="others">
-          Outros
-        </label>
+        <select id="courses">
+          <option value="slash">---</option>
+          <option value="SAP HCM Success Factors (17 de Maio 2021)">SAP HCM Success Factors (17 de Maio 2021)</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Business Intelligence Analytics (31 de Maio de 2021)">Business Intelligence & Analytics (31 de Maio de 2021)</option>
+        </select>
       </div>
-    </div>
-
-    <br>
-
-    <!-- Year of Conclusion -->
-    <div class="form-label">
-      <label for="year">
-        Ano de Conclusão*
-      </label>
 
       <br>
 
-      <input
-        class="input-label"
-        type="number"
-        id="year"
-        name="year"
-        placeholder="Ano de Conclusão">
-    </div>
-
-    <br>
-
-    <!-- Motive for Application -->
-    <div class="form-label">
-      <label for="motive">
-        Motivo da Candidatura*
-      </label>
-
-      <br>
-
-      <input
-        class="input-label"
-        type="text"
-        id="motive"
-        name="motive"
-        placeholder="Motivo da Candidatura">
-    </div>
-
-    <br>
-
-    <!-- Kowledge about the Academy -->
-    <div class="form-label">
-      <label
-        for="knowledge">
-        Como obteve conhecimento da nossa Academia?*
-      </label>
-
-      <br>
-
-      <div class="check-options">
-        <input
-          type="checkbox"
-          id="know-someone-in-the-company"
-          name="know-someone-in-the-company">
-
-          <label
-            for="know-someone-in-the-company">
-            Conheço alguém que faz parte do Grupo ID / ITGEST
+      <!-- Name and Last Name -->
+      <div class="form-label">
+        <label for="name-lastname">
+          Nome e Apelido*
         </label>
 
         <br>
 
         <input
-          type="checkbox"
-          id="social-network"
-          name="social-network">
-
-          <label
-            for="social-network">
-            Redes Sociais (Facebook, instagram ou outro)
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="linkedin"
-          name="linkedin">
-
-          <label
-            for="linkedin">
-            Linkedin
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="through-college"
-          name="through-college">
-
-          <label
-            for="through-college">
-            Através da faculdade / universidade
-        </label>
-
-        <br>
-
-        <input
-          type="checkbox"
-          id="knowledge-others"
-          name="knowledge-others">
-
-          <label
-            for="knowledge-others">
-            Outro
-        </label>
+          class="input-label"
+          type="text"
+          id="name-lastname"
+          name="name-lastname"
+          size="40"
+          placeholder="Nome e Apelido">
       </div>
-    </div>
-
-    <br>
-
-    <!-- Upload CV -->
-    <div class="form-label">
-      <label for="myfile">
-        Upload de <i>CV</i>*
-      </label>
 
       <br>
 
-      <input
-        class="input-label"
-        type="file"
-        id="myfile"
-        name="myfile"
-        placeholder="Motivo da Candidatura">
-    </div>
+      <!-- Email -->
+      <div class="form-label">
+        <label for="email">
+          Endereço de e-mail*
+        </label>
 
-    <br>
+        <br>
 
-    <!-- Upload Certificate -->
-    <div class="form-label">
-      <label for="diploma">
-        Upload de Certificado de Habilitações*
-      </label>
-
-      <br>
-
-      <input
-        class="input-label"
-        type="file"
-        id="diploma"
-        name="diploma"
-        placeholder="Motivo da Candidatura">
-    </div>
-
-    <br>
-
-    <!-- Doubts and clarifications -->
-    <div class="form-label">
-      <label for="doubts">
-        Deixa aqui as tuas dúvidas e esclarecimentos
-      </label>
+        <input
+          class="input-label"
+          type="email"
+          name="email"
+          size="40"
+          placeholder="Endereço de Email">
+      </div>
 
       <br>
 
-      <textarea
-        class="input-label"
-        name="doubts"
-        cols="40"
-        rows="15"
-        placeholder="Deixa-nos aqui as tuas dúvidas / pedidos de esclarecimento"></textarea>
-    </div>
+      <!-- Date of Birth -->
+      <div class="form-label">
+        <label for="dob">
+          Data de Nascimento*
+        </label>
 
-    <br>
+        <br>
 
-    <div>
-      <input
-        class="policy-checkbox"
-        type="checkbox"
-        name="policy"
-        value="1">
-
-      <span>Dou o meu consentimento à ITGest para tratar dos meus dados pessoais tal como descrito na
-        <a
-          class="policy"
-          href="https://academy.itgest.pt/politica-de-privacidade"
-          target="_blank">
-          Política de Privacidade
-        </a>
-      </span>
+        <input
+          class="input-label"
+          type="date"
+          id="dob"
+          name="dob">
+      </div>
 
       <br>
 
-      <button
-        class="submit-form"
-        type="button">
-        Enviar Inscrição
-      </button>
+      <!-- Qualifications -->
+      <div class="form-label">
+        <label for="qualifications">
+          Habilitações Literárias*
+        </label>
+
+        <br>
+
+        <div class="check-options">
+          <input
+            type="checkbox"
+            id="high-school"
+            name="high-school">
+
+          <label
+            for="high-school">
+            Ensino Secundário
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="graduation"
+            name="graduation">
+
+          <label
+            for="graduation">
+            Licenciatura
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="masters-degree"
+            name="masters-degree">
+
+          <label
+            for="masters-degree">
+            Mestrado
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="doctorate"
+            name="doctorate">
+
+          <label
+            for="doctorate">
+            Doutoramento
+          </label>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- School Area -->
+      <div class="form-label">
+        <label for="school-area">
+          Área de Formação*
+        </label>
+
+        <br>
+
+        <div class="check-options">
+          <input
+            type="checkbox"
+            id="social-sciences"
+            name="social-sciences">
+
+          <label
+            for="social-sciences">
+            Ciências Sociais e Humanos
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="business-sciences"
+            name="business Sciences">
+
+          <label
+            for="business Sciences">
+            Ciências Empresariais
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="economics"
+            name="economics">
+
+          <label
+            for="economics">
+            Gestão / Economia
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="computer-it"
+            name="computer-it">
+
+          <label
+            for="computer-it">
+            Informática
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="management-it"
+            name="management-it">
+
+          <label
+            for="management-it">
+            Informática de Gestão
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="engineering"
+            name="engineering">
+
+          <label
+            for="engineering">
+            Engenharia e técnicas afins
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="accounting"
+            name="accounting">
+
+          <label
+            for="accounting">
+            Contabilidade / Finanças
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="health"
+            name="health">
+
+          <label
+            for="health">
+            Saúde
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="social-services"
+            name="social-services">
+
+          <label
+            for="social-services">
+            Serviços Sociais
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="others"
+            name="others">
+
+          <label
+            for="others">
+            Outros
+          </label>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Year of Conclusion -->
+      <div class="form-label">
+        <label for="year">
+          Ano de Conclusão*
+        </label>
+
+        <br>
+
+        <input
+          class="input-label"
+          type="number"
+          id="year"
+          name="year"
+          placeholder="Ano de Conclusão">
+      </div>
+
+      <br>
+
+      <!-- Motive for Application -->
+      <div class="form-label">
+        <label for="motive">
+          Motivo da Candidatura*
+        </label>
+
+        <br>
+
+        <input
+          class="input-label"
+          type="text"
+          id="motive"
+          name="motive"
+          placeholder="Motivo da Candidatura">
+      </div>
+
+      <br>
+
+      <!-- Kowledge about the Academy -->
+      <div class="form-label">
+        <label
+          for="knowledge">
+          Como obteve conhecimento da nossa Academia?*
+        </label>
+
+        <br>
+
+        <div class="check-options">
+          <input
+            type="checkbox"
+            id="know-someone-in-the-company"
+            name="know-someone-in-the-company">
+
+            <label
+              for="know-someone-in-the-company">
+              Conheço alguém que faz parte do Grupo ID / ITGEST
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="social-network"
+            name="social-network">
+
+            <label
+              for="social-network">
+              Redes Sociais (Facebook, instagram ou outro)
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="linkedin"
+            name="linkedin">
+
+            <label
+              for="linkedin">
+              Linkedin
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="through-college"
+            name="through-college">
+
+            <label
+              for="through-college">
+              Através da faculdade / universidade
+          </label>
+
+          <br>
+
+          <input
+            type="checkbox"
+            id="knowledge-others"
+            name="knowledge-others">
+
+            <label
+              for="knowledge-others">
+              Outro
+          </label>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Upload CV -->
+      <div class="form-label">
+        <label for="myfile">
+          Upload de <i>CV</i>*
+        </label>
+
+        <br>
+
+        <input
+          class="input-label"
+          type="file"
+          id="myfile"
+          name="myfile"
+          placeholder="Motivo da Candidatura">
+      </div>
+
+      <br>
+
+      <!-- Upload Certificate -->
+      <div class="form-label">
+        <label for="diploma">
+          Upload de Certificado de Habilitações*
+        </label>
+
+        <br>
+
+        <input
+          class="input-label"
+          type="file"
+          id="diploma"
+          name="diploma"
+          placeholder="Motivo da Candidatura">
+      </div>
+
+      <br>
+
+      <!-- Doubts and clarifications -->
+      <div class="form-label">
+        <label for="doubts">
+          Deixa aqui as tuas dúvidas e esclarecimentos
+        </label>
+
+        <br>
+
+        <textarea
+          class="input-label"
+          name="doubts"
+          cols="40"
+          rows="15"
+          placeholder="Deixa-nos aqui as tuas dúvidas / pedidos de esclarecimento"></textarea>
+      </div>
+
+      <br>
+
+      <div>
+        <input
+          class="policy-checkbox"
+          type="checkbox"
+          name="policy"
+          value="1">
+
+        <span>Dou o meu consentimento à ITGest para tratar dos meus dados pessoais tal como descrito na
+          <a
+            class="policy"
+            href="https://academy.itgest.pt/politica-de-privacidade"
+            target="_blank">
+            Política de Privacidade
+          </a>
+        </span>
+
+        <br>
+
+        <button
+          class="submit-form"
+          type="button">
+          Enviar Inscrição
+        </button>
+      </div>
     </div>
 
     <footer>
