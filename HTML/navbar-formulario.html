@@ -49,6 +49,10 @@
         width: 73px;
       }
 
+      a {
+        color: #100505;
+      }
+
       .links li {
         display: inline;
         float: inherit;
@@ -115,7 +119,7 @@
 
       .policy {
         color:#ffe600;
-        text-decoration:underline;
+        text-decoration: underline;
       }
 
       .policy-checkbox {
@@ -145,8 +149,11 @@
         padding: 25px;
         width: 100%;
         line-height: 10px;
-        text-transform: uppercase;
         background-color: #070706;
+      }
+
+      .link-to-policy {
+        color: white;
       }
     </style>
 
@@ -193,7 +200,7 @@
         class="sign-in-button"
         onclick="toggleSignInForm()">
 
-        <a href="#sign-in">Inscreve-te</a>
+        Inscreve-te
       </button>
     </nav>
 
@@ -636,6 +643,7 @@
 
       <br>
 
+      <!-- Policy -->
       <div>
         <input
           class="policy-checkbox"
@@ -663,7 +671,14 @@
     </div>
 
     <footer>
-      <span>Copyright © 2021 ITGest Academy | Powered by ITGest | <a style="color: #a73131;" href="https://academy.itgest.pt/politica-de-privacidade">Política de Privacidade</a></span>
+      <span>Copyright © 2021 ITGest Academy | Powered by ITGest |
+        <a
+          class="link-to-policy"
+          href="https://academy.itgest.pt/politica-de-privacidade">
+
+          Política de Privacidade
+        </a>
+      </span>
     </footer>
   </body>
 </html>
