@@ -1,0 +1,16 @@
+{
+  "name": "aula-1",
+  "version": "0.0.1",
+  "description": "Aula do dia 17 de 05 2021 sobre variaveis em Javascript",
+  "main": "index.js",
+  "author": "ITGest Academy",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "start": "browser-sync start --server --files \"*.html\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}
