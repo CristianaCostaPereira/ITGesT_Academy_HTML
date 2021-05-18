@@ -20,18 +20,20 @@
       const candy = ['Chocolate', 'Marshmallow', 'Cookie']
 
       const food = fruit.concat(candy)
-
       // console.log(food);
 
       // copyWithin method: shallow copies part of an array to another location in the same array and returns it without modifying its length
       // syntax: array.copyWithin(target, start, end)
-
       const characters = ['a', 'b', 'c', 'd', 'e']
 
       // characters.copyWithin(0, 2, 3)
       // characters.copyWithin(2, 3)
+      // console.log(characters);
 
-      console.log(characters);
+      // entries method: returns a new Array Iterator object that contains the key/value pairs for each index in the array
+      const iterator = characters.entries()
+
+      console.log(iterator.next().value)
     </script>
   </body>
 </html>
