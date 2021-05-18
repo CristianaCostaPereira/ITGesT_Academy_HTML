@@ -7,7 +7,7 @@
   "license": "none",
   "private": true,
   "scripts": {
-    "start": "browser-sync start --server --files \"*.html\""
+    "start": "browser-sync --start --server --files \"*.html\""
   },
   "dependencies": {},
   "devDependencies": {
