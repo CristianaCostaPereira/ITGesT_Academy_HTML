@@ -14,15 +14,37 @@
     </header>
 
     <script>
-      // v1 representa o valor da esquerda na operação
-      const v1 = 10
-      const v2 = 5
+      const calculadora = {
+        print: function (resultado) {
+          console.log('O resultado é : ' + resultado)
+        },
 
-      const sumResult = v1 + v2
-      const divResult = v1 / v2
+        sum: function sum(v1, v2) {
+          const result =  v1 + v2
 
-      console.log(sumResult);
-      console.log(divResult);
+          return result
+        },
+
+        div: function div (v1, v2) {
+          const result = v1 / v2
+
+          return result
+        },
+            
+        mult: function mult (v1, v2) {
+          const result =  v1 * v2
+
+          return result
+        },
+
+        sub: function sub (v1, v2) {
+          const result = v1 - v2
+
+          return result
+        },
+      }
+
+      console.log(calculadora.sub(6,4));
     </script>
   </body>
 </html>
