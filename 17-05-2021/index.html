@@ -32,15 +32,23 @@
       function funEscopoGlobal() {
         const enScope = {
           print: function (resultado) {
-            console.log('The reult is: ' + resultado)
+            console.log('The result is: ' + resultado);
           }
         }
+
+        /*
+        Teria de ter estas variáveis globais para poder ser impresso o resultado 
+        v1 = 1
+        v2 = 3
+        */
 
         const sum = calculadora.sum
 
         const result = sum()
 
         console.log(result);
+
+        console.log(sum());
       }
 
       funEscopoGlobal()
