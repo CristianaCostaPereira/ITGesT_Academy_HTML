@@ -14,26 +14,44 @@
     </header>
 
     <script>
+      const characters = ['a', 'b', 'c', 'd', 'e']
+
       // concat method: used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
       const fruit = ['Melon', 'Strawberry', 'Lemon']
 
       const candy = ['Chocolate', 'Marshmallow', 'Cookie']
 
       const food = fruit.concat(candy)
-      // console.log(food);
-
+      console.log(food);
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+      
       // copyWithin method: shallow copies part of an array to another location in the same array and returns it without modifying its length
       // syntax: array.copyWithin(target, start, end)
-      const characters = ['a', 'b', 'c', 'd', 'e']
 
       // characters.copyWithin(0, 2, 3)
       // characters.copyWithin(2, 3)
-      // console.log(characters);
+//-----------------------------------------------------------------------------------------------------------------------------------------------
 
       // entries method: returns a new Array Iterator object that contains the key/value pairs for each index in the array
-      const iterator = characters.entries()
+      // const iterator = characters.entries()
+      // console.log(iterator.next().value)
+//-----------------------------------------------------------------------------------------------------------------------------------------------
 
-      console.log(iterator.next().value)
+      // every method: tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value
+      const age  =  [30, 12, 23, 8, 15]
+
+      const checkAge = (age) => {
+        return age >= 20
+      }
+
+      // console.log(age.every(checkAge))
+ //-----------------------------------------------------------------------------------------------------------------------------------------------
+      
+      // fill method: fill all the array elements with a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array
+      // console.log(characters.fill('c', 1, 4));
+ //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+      
     </script>
   </body>
 </html>
