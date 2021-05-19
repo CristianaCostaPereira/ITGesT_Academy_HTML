@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Social Window</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Aula 3</h1>
+
+      <p>Exercício: Ciclos</p>
+
+    </header>
+
+    <script>
+      // pop() via loop: removes the last element from an array and returns that element
+      const numbers = [1, 2, 3, 4, 5]
+
+      let pop = []
+      let notPop = []
+
+      for (let i = 0; i < numbers.length; i++) {
+        if (i == numbers.length -1) { // para remover o último
+          pop.push(numbers[i]) // vai retornar o elemento que removi, o '5'
+        } else {
+          notPop.push(numbers[i])
+        }
+      }
+      console.log('Elemento removido: ' + pop);
+      console.log('Novo pop array criado: ' + notPop);
+
+      console.log('');
+
+      // shift() via loop: removes the first element from an array
+      let shift = null // para 'guardar' o 1º elemento do [] que será removido para depois ser imprimido
+      let shiftedArray = []
+
+      for (let i = 0; i < numbers.length; i++) {
+        if (i == 0) {
+          shift = numbers[i]
+        } else {
+          shiftedArray.push(numbers[i])
+        }
+      }
+      console.log('Item removido: ' + shift); // item removido
+      console.log('Novo shift() array criado: ' + shiftedArray); // [] sem o item removido
+
+      console.log('');
+
+      // map(): item in the array *2
+      const mappedArray = []
+
+      for (let i = 0; i < numbers.length; i++) {
+        mappedArray.push(numbers[i]*2); // guarda num novo []
+      }
+      console.log('map(): ' + mappedArray);
+
+      console.log('');
+
+      // join() via loop: creates and returns a new string by concatenating all of the elements in an array
+      let i = 0;
+      let concatenetedText = "";
+
+      while (i < numbers.length) {
+        concatenetedText += numbers[i];
+        i++; // porque o while não incrementa sozinho
+
+        // para adicionar um '-' se não for o último elemento no []
+        if (i < numbers.length) {
+          concatenetedText += '-'
+        }
+      }
+      console.log('join(): ' + concatenetedText);
+
+      console.log('');
+
+      // filter() via loop: gets the odds and even numbers present in the []
+      const even = []
+      const odd = []
+
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0 ) {
+          even.push(numbers[i])
+        } else {
+          odd.push(numbers[i])
+        }
+      }
+      console.log('filter(): ', even, odd);
+
+      console.log('')
+
+      // find(): returns the value of the first matched element of the provided array
+      let returnedValue = 'Not found'
+
+      for (let i = 0; i < numbers.length; i++ ) {
+        if (numbers[i] > 2) {
+          returnedValue = numbers[i] // se entrar no if altera o valor de returnedValue
+          break // para sair do loop
+        }
+      }
+      console.log('find(): ' + returnedValue); // para mostrar apenas o primeiro valor >2
+
+      console.log('')
+
+      // reverse(): inverts tthe order of the []
+      let j = numbers.length -1 // para iniciar no fim do [], é o index da última posição (4, neste caso)
+      let newArray = []
+
+      while (j >= 0) {
+        newArray.push(numbers[j])
+        j--
+      }
+      console.log('reverse(): ' + newArray);
+
+      console.log('');
+
+      // keys(): contains the keys for each index in the array
+      let index = 0
+      console.log('keys(): ');
+
+      while (index < numbers.length) {
+        console.log(index); // para começar no zero e ser incrementado na seguinte linha, caso contrário iria imprimir logo o 1
+        index++;
+      }
+
+      console.log('');
+
+      // indexOf: returns the first index at which a given element can be found in the array
+      let foundIndex = -1
+
+      for (let i = 0; i < numbers.length; i++ ) {
+        if (numbers[i] == 5) {
+          foundIndex = i
+          break
+        }
+      }
+      console.log('indexOf(5): ' + foundIndex);
+
+      console.log('');
+
+      // length
+      index = 0
+      while (index < numbers.length) {
+        index++;
+      }
+      console.log('length: ' + index);
+    </script>
+  </body>
+</html>
