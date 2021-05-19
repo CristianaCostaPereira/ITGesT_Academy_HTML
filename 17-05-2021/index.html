@@ -9,38 +9,20 @@
 
   <body>
     <header>
-      <h1>Aula 2</h1>
+      <h1>Aula 3</h1>
       <p>Tema: Array</p>
     </header>
 
     <script>
+      const numbers = [4, 9, 16, 25]
 
-      const numbers = [6, 5, 7, 4, 8, 3, 9, 2, 0]
+      const result = numbers.map((item) => {
+        return Math.sqrt(item)
+      })
 
-      const numeroRemovido = numbers
-      .sort()
-      .reverse()
-      .filter((v1) => v1 > 5)
+      console.log(result)
+
       
-      console.log(numeroRemovido);
-
-      // class Person {
-      //   constructor(firstName, lastName) {
-      //     this.firstName = firstName
-      //     this.lastName = lastName
-      //   }
-      // }
-
-      // const persons = [
-      //   new Person('Eleandro', 'Duzentos'),
-      //   new Person('Alícia', 'Pereira'),
-      //   new Person('Filipe', 'Carolino'),
-      //   new Person('Marianne', 'Jones'),
-      //   new Person('Ailton', 'Allen'),
-      //   new Person('Angelino', 'Valeta')
-      // ]
-
-      // console.table(persons);
     </script>
   </body>
 </html>
