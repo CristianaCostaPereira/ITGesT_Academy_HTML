@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 2</title>
+
+    <title>Social Window</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <style>
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    </style>
   </head>
 
   <body>
-    <header>
-      <h1>Aula 3</h1>
-      <p>Tema: Ciclos</p>
+    <div class="container">
+      <header>
+        <h1>Social Window</h1>
 
-      <input type="text" id="value" placeholder="Valor Numérico" value="0">
-      <input type="submit" id="submit" placeholder="Valor Numérico" value="Submeter">
-    </header>
+        <p>Abra a sua conta social sem digitar o URL</p>
+      </header>
 
-    <script>
-      let _window
+      <form class="form">
+        <select id="social-option">
+          <option value="https://github.com">GitHub</option>
+          <option value="https://facebook.com">Facebook</option>
+          <option value="https://twitter.com">Twitter</option>
+        </select>
 
-      document.querySelector('#submit').addEventListener('click', (e)  => {
-        e.preventDefault()
-        
-        const { value } = document.querySelector('#value')
+        <input placeholder="Username..." id="username">
 
-        if (value == 0) {
-          _window = window.open('https://google.com')
-        } else if (value == 1) {
-          _window = window.open('https://duckduckgo.com')
-        } else {
-          _window.close()
-        }
-      })
+        <input type="submit" id="submit-button" value="Abrir">
+      </form>
+    </div>
+
+    <script src="./index.js">
     </script>
   </body>
 </html>
