@@ -1,9 +1,15 @@
 const submitButton = document.querySelector('#submit-button')
 
+const openWindows = []
+
 function openSocialUrlByUserName(url, username) {
   const socialUrl = [url, username].join('/')
 
-  window.open(socialUrl)
+  const _window = window.open(socialUrl)
+
+  openWindows.push(_window)
+
+  console.log(openWindows);
 }
 
 submitButton.addEventListener('click', (e) => {
