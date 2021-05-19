@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+
+<body>
+  <h1>Arrays</h1>
+  <h2>Métodos</h2>
+
+  <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    console.log('Unindo e separando os elementos do Array com *');
+    console.log(fruits.join(" * "));
+    console.log('');
+
+    console.log('Remover elemento da última posição do array com o pop');
+    console.log(fruits.pop());
+    console.log('');
+
+    console.log('Adicionando elemento na última posição no array com o push');
+    console.log(fruits.push("Abacaxi"));
+    console.log('');
+
+    console.log('Remover elemento da primeira posição do array com o shift');
+    console.log(fruits.shift());
+    console.log('');
+
+    console.log('Adicionando elemento na primeira posição no array com o unshift');
+    console.log(fruits.unshift("Lemon"));
+    console.log('');
+
+    console.log('Adicionando elemento no array com o length');
+    console.log(fruits[fruits.length] = "Amora");
+    console.log('');
+
+    console.log('Remover o elemento no array com o delete');
+    console.log(delete fruits[2]);
+    console.log('');
+
+    console.log('Adicionando elemento no array com o Splice');
+    console.log(fruits.splice(2, 0, "Abacate", "Framboesa"));
+    console.log('');
+
+    console.log('Mostrar os elemeentos do array com o map');
+    fruits.map(fruit => {
+      console.log(fruit);
+    });
+    console.log('');
+
+    console.log('Remover elemento com o Splice');
+    console.log(fruits.splice(0, 1));
+    console.log('');
+
+    console.log('Mostras os elemeentos do array com o forEach');
+    fruits.forEach(fruit => {
+      console.log(fruit);
+    });
+    console.log('');
+
+    console.log('=Tornar o array em strings=');
+    console.log(fruits.toString());
+    console.log('');
+
+    console.log('Ordenamento das frutas crescentemente');
+    console.log(fruits.sort());
+    console.log('');
+
+    console.log('Ordenamento das frutas reversamente ');
+    console.log(fruits.reverse());
+    console.log('');
+    
+    console.log('Ordem Crescente dos números');
+    var points = [40, 100, 1, 5, 25, 10];
+    points.sort(function (a, b) {
+      return b - a;
+    });
+    console.log(points);
+
+  </script>
+</body>
+
+</html>
