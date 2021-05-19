@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Aula 3</h1>
+      <p>Tema: Conversões</p>
+
+      <input type="number" id="value" placeholder="Valor Numérico" value="5">
+    </header>
+
+    <script>
+      // parseFloat
+      const value = document.querySelector('#value').value
+      console.log(typeof value)
+
+      const number = parseFloat(value)
+
+      console.log(+value + 1); // +value, força o valor a ser um número
+
+      console.log(typeof number);
+    </script>
+  </body>
+</html>
