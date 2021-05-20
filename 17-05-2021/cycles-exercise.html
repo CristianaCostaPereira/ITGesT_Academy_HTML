@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Social Window</title>
+    <title>Ciclos</title>
   </head>
 
   <body>
@@ -71,7 +71,7 @@
 
         // para adicionar um '-' se não for o último elemento no []
         if (i < numbers.length) {
-          concatenetedText += '-'
+          concatenetedText += '-' // o memso que ter concatenetedText = concatenetedText + '-'
         }
       }
       console.log('join(): ' + concatenetedText);
@@ -79,8 +79,8 @@
       console.log('');
 
       // filter() via loop: gets the odds and even numbers present in the []
-      const even = []
-      const odd = []
+      let even = []
+      let odd = []
 
       for (let i = 0; i < numbers.length; i++) {
         if (numbers[i] % 2 == 0 ) {
@@ -90,19 +90,6 @@
         }
       }
       console.log('filter(): ', even, odd);
-
-      console.log('')
-
-      // find(): returns the value of the first matched element of the provided array
-      let returnedValue = 'Not found'
-
-      for (let i = 0; i < numbers.length; i++ ) {
-        if (numbers[i] > 2) {
-          returnedValue = numbers[i] // se entrar no if altera o valor de returnedValue
-          break // para sair do loop
-        }
-      }
-      console.log('find(): ' + returnedValue); // para mostrar apenas o primeiro valor >2
 
       console.log('')
 
@@ -117,6 +104,19 @@
       console.log('reverse(): ' + newArray);
 
       console.log('');
+
+      // find(): returns the value of the first matched element of the provided array
+      let returnedValue = 'Not found'
+
+      for (let i = 0; i < numbers.length; i++ ) {
+        if (numbers[i] > 2) {
+          returnedValue = numbers[i] // se entrar no if altera o valor de returnedValue
+          break // para sair do loop
+        }
+      }
+      console.log('find(): ' + returnedValue); // para mostrar apenas o primeiro valor >2
+
+      console.log('')
 
       // keys(): contains the keys for each index in the array
       let index = 0
