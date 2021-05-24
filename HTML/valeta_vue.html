@@ -253,7 +253,7 @@
               <select
                 required
                 id="cursos"
-                v-model="student.courses">
+                v-model="student.course">
                 <option value="default" selected>---</option>
                 <option value="sapHCM">SAP HCM Success Factors (17 de Maio 2021)</option>
                 <option value="softwareDev" disabled>Software Development(Inscrições Fechadas)</option>
@@ -611,7 +611,7 @@
 
       data: {
         student: {
-          courses: [],
+          course: null, // Because user can only choose one
           name: '',
           email: '',
           birthdate: '',
