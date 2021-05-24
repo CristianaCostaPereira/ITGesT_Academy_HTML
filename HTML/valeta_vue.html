@@ -210,8 +210,10 @@
 
   <body>
     <div id="vuejs">
+
       <!-- Navigation -->
       <nav class="nav">
+
         <!-- Logo ITGest Academy -->
         <a class="logo" href="#">
           <img src="https://academy.itgest.pt/wp-content/uploads/2021/03/itgest-academy-logo.svg" alt="ITGest Academy"
@@ -220,6 +222,7 @@
 
         <div class="navItems">
           <a href="https://academy.itgest.pt/#academias">Academias</a>
+
           <a href="#">Sobre a ITGest Academy</a>
 
           <button id="openForm" class="btnInscreveTe" onclick="openForm()">Inscreve-te</button>
@@ -227,19 +230,23 @@
       </nav>
 
       <main id="mainForm">
+
         <!-- Formulário para candidatura da Academia -->
         <form class="itgestForm" id="itgestForm" action="">
+
           <!-- Cabeçalho do formulario -->
           <div class="formHeader">
+
             <!-- Botão para fechar o formulario -->
             <span onclick="closeForm()" class="closeBtn">
               &times;
             </span>
+
             <h1 class="formTitle">Inscreve-te</h1>
           </div>
 
+          <!-- Elementos HTML para escolher o Curso  -->
           <div class="container">
-            <!-- Elementos HTML para escolher o Curso  -->
             <div>
               <label for="curso">Academia a que se está a candidatar*</label>
               <br>
@@ -296,9 +303,9 @@
               </div>
             </div>
 
+            <!-- Informações sobre Habilitações Literárias -->
             <div class="formControlGroup">
 
-              <!-- Informações sobre Habilitações Literárias -->
               <div class="habilitacoes">
                 <h4>Habilitações Literárias*</h4>
 
@@ -547,10 +554,10 @@
             <div>
               <label for="certificatio">Upload de Certificado de Habilitações*</label>
               <div>
-                <input 
-                  type="file" 
-                  required 
-                  name="certificatio" 
+                <input
+                  type="file"
+                  required
+                  name="certificatio"
                   id="certificatio">
               </div>
             </div>
@@ -562,8 +569,8 @@
               </div>
               <textarea
                 v-model="student.questions"
-                name="duvidas" 
-                placeholder="Deixa-nos aqui as tuas dúvidas/ pedidos de esclarecimento" 
+                name="duvidas"
+                placeholder="Deixa-nos aqui as tuas dúvidas/ pedidos de esclarecimento"
                 id="duvidas"
                 rows="20">
               </textarea>
@@ -588,6 +595,12 @@
         style="margin-top: 100px;">
         <!-- {{ JSON.stringify(student) }}
         {{ greetings }} -->
+
+        Nome do estudante: {{ student.name }}
+
+        <br>
+
+        Nome do estudante: {{ student.qualifications }}
       </div>
     </div>
   </body>
