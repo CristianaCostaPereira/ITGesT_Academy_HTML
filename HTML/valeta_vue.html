@@ -662,16 +662,17 @@
         //Because property name is inside {} student Otherwise the syntax would be: name () {}
         'student.name' () {
           alert('Nome do estudante mudou')
-        }
+        },
       },
 
       created () {
-        debugger
+        // So that 'licenciatura' appear already pre-populated
+        this.student.qualifications = ['licenciatura']
       },
 
-      mounted () {
-        debugger
-      }
+      // mounted () {
+      //   debugger
+      // }
     })
 
     function openForm() {
