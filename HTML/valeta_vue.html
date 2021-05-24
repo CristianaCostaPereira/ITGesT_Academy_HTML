@@ -585,7 +585,7 @@
                   href="https://academy.itgest.pt/politica-de-privacidade" target="_blank">Política de
                   Privacidade</a></label>
               <br>
-              <input type="submit" value="ENVIAR INSCRIÇÃO">
+              <input type="submit" value="ENVIAR INSCRIÇÃO" @click="uploadFile">
             </div>
           </div>
         </form>
@@ -601,6 +601,10 @@
         <br>
 
         Nome do estudante: {{ student.qualifications }}
+
+        <br>
+
+        {{ greetings }}
       </div>
     </div>
   </body>
@@ -627,19 +631,37 @@
 
       computed: {
         greetings () {
-            return 'Olá ' + this.student.name
+          if (this.student.name != '') {
+            return 'Olá ' + this.student.name + ', o teu email é: ' + this.student.email
+            
+          } else {
+            return ''
+          }
         }
       },
 
       methods: {
-        uploadFile: function (file) {
-          debugger
+        validateStudent () {
+          if (this.student.name  === '') {
+            alert('Deverá preencher os campos do formulário')
+
+            return
+          }
+        },
+
+        uploadFile () {
+          //validations
+          this.validateStudent()
+          
+
+          // At the end: call an API to save the inscritions
         }
       },
 
       watch: {
-        'student.name' (tab) {
-          debugger
+        //Because property name is inside {} student Otherwise the syntax would be: name () {}
+        'student.name' () {
+          alert('Nome do estudante mudou')
         }
       },
 
